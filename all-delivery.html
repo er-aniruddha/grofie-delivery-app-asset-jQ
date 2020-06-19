@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>Grofie Delivery Partner</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="style_new.css" rel="stylesheet">
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- Dashboard Start -->
+    <div class="app-admin-wrap layout-sidebar-large clearfix">
+        <div class="main-header">
+            <a href="dashboard.html">
+                <div class="header-back">
+                    <svg class="header-icon menu-icon" viewBox="0 0 24 24">
+                        <path fill="#3E4152" fillrule="evenodd" 
+                        d="M20.25 11.25H5.555l6.977-6.976a.748.748 0 000-1.056.749.749 0 00-1.056 
+                        0L3.262 11.43A.745.745 0 003 12a.745.745 0 00.262.57l8.214 8.212a.75.75 0 
+                        001.056 0 .748.748 0 000-1.056L5.555 12.75H20.25a.75.75 0 000-1.5"></path>
+                    </svg>
+                </div>
+            </a>
+            <div style="margin: auto"></div>
+            
+        </div>
+        <!-- header top menu end -->
+        <div class="side-content-wrap">
+            <div class="main-content-wrap d-flex flex-column">
+                <div class="main-content">
+                    <div id="deliveryUserName"></div>
+                    <div class="separator-breadcrumb border-top"></div>
+                    <!-- Pre Loader Strat  -->
+                    <div class="text-center text-primary preload">
+                        <div class="spinner-border" role="status" style="width: 4rem; height: 4rem;">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                    </div>
+                    <!-- Pre Loader end  -->
+                    <section class="widget-card">
+                        <div class="row">
+                            <!-- Show Assign Orders Start -->
+                            <div id="allOrders"  class="col-md-12">
+                            </div>
+                            <!-- Show Assign Orders End -->
+                           
+                        </div><!-- row end-->
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Dashboard End -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+        $('.menu-toggle').click(function () {
+            $('.sidebar-left').toggleClass("open");
+        });
+    </script>
+    <script src="all-delivery.js"></script>
+</body>
+
+</html>

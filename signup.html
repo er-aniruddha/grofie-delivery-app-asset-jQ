@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>Grofie Delivery Partner</title>
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="style_new.css" rel="stylesheet">
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- Log In Strat -->
+    <div class="container-fluid">
+        <div class="row log-reg  d-log">
+            <!-- Log In -->
+            <div class="login-pop" id="log">
+                <h5 class="head-title">Sign Up</h5>
+                <form method="POST" id="_signUpForm">
+                    <div class="wrap-input">
+                        <input class="input1" type="text" name="f_name" id="f_name">
+                        <span class="focus-input" data-placeholder="First Name"></span>
+                        <div id="fName-error" class="error"></div>
+                    </div>
+                    <div class="wrap-input">
+                        <input class="input1" type="text" name="s_name" id="s_name">
+                        <span class="focus-input" data-placeholder="Surname"></span>
+                        <div id="sName-error" class="error"></div>
+                    </div>
+                    <div class="wrap-input">
+                        <input class="input1" type="number" name="phone" id="phone" autocorrect="off" autofocus="autofocus"
+                            autocomplete="off" animate="true" autocomplete="off" autocapitalize="off" spellcheck="false"
+                            onKeyPress="if(this.value.length==10) return false;">
+                        <span class="focus-input" data-placeholder="Phone Number"></span>
+                        <div id="phone-error" class="error"></div>
+                    </div>
+                    <div class="wrap-input">
+                        <input class="input1" type="email" name="email" id="email">
+                        <span class="focus-input" data-placeholder="Email Id"></span>
+                        <div id="email-error" class="error"></div>
+                    </div>
+                    <div class="wrap-input">
+                        <input class="input1" type="number" name="pin" id="pin" 
+                        autocorrect="off" autofocus="autofocus" autocomplete="off" animate="true" autocomplete="off" autocapitalize="off" spellcheck="false"
+                        onKeyPress="if(this.value.length==6) return false;" 
+                        style="-webkit-text-security: disc;">
+                        <span class="focus-input" data-placeholder="PIN"></span>
+                        <div id="pin-error" class="error"></div>
+                    </div>
+                    <div class="wrap-input">
+                        <input class="input1" type="number" name="pin_confirmation" id="pin_confirmation" 
+                        autocorrect="off" autofocus="autofocus" autocomplete="off" animate="true" autocomplete="off" autocapitalize="off" spellcheck="false"
+                         onKeyPress="if(this.value.length==6) return false;" 
+                         style="-webkit-text-security: disc;">
+                        <span class="focus-input" data-placeholder="Confirm PIN"></span>
+                        <div id="pin-confirm-error" class="error"></div>
+                    </div>
+                    <fieldset class="form-group">
+                        <button type="submit" class="dlog-btn" id="_SignUpBtn"><i class="mdi mdi-lock"></i> Sign Up</button>
+                    </fieldset>
+    
+                    <fieldset class="form-group">
+                        <button class="btn d-loader" type="button" disabled style="display: none;">
+                            <span class="spinner-border spinner-border-sm text-primary" role="status"
+                                aria-hidden="true"></span>
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="custom.js"></script>
+    <script src="signup.js"></script>
+</body>
+</html>
